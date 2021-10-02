@@ -1,0 +1,631 @@
+
+<!doctype html>
+
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <title>Our Morning Doe</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="template.css">
+
+</head>
+
+<body>
+
+  
+  <section id="1">
+  <div class="container-fluid">
+    <div class="theme">
+      <div class="logoImage">
+        <a><img src="Logo.png" width=400px /></a>
+      </div>
+      <h1>Our Morning Doe</h1>
+      <p>Local Breakfast diner in the Blacksburg area</p>
+    </div>
+    <br />
+
+    <!--navigation bar for entire webpage-->
+    <nav class="desc">
+      <ul class="nav nav-pills">
+        <li><a href= "template.html">Home</a></li>
+        <li><a href="AboutUs.php">About Us</a></li>
+        <li role="presentation" class="dropdown">
+          <a <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria- haspopup="true" aria-expanded="false">
+            Menu<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="OrderOnlinePage_Ryan.php">Order Online</a></li>
+            <li><a href="MenuItemsPage_Ryan.html">Menu Items</a></li>
+            <li><a href="OrderHistoryPage_Ryan.php">Order History</a></li>
+          </ul>
+        </li>
+          <li><a href="createReview_Andre.php">Reviews</a></li>
+          <li><a href="CustomerLoginPage_Andre.php">Customers</a></li>
+          <li><a href="EmployeeLoginPage_Keith.php">Employees</a></li>
+          <li><a href="ManagerLogin_John.php">Managers</a></li>
+      </ul>
+    </nav>
+    <br />
+
+    <!--navigation bar for menu items-->
+    <nav class="items">
+      <ul class="nav nav-pills">
+        <li class="active"><a href="MenuItemsPage_Ryan.html#level1">Appetizers</a></li>
+        <li class="active"><a href="MenuItemsPage_Ryan.html#level2">Entrees</a></li>
+        <li class="active"><a href="MenuItemsPage_Ryan.html#level3">Bagels</a></li>
+        <li class="active"><a href="MenuItemsPage_Ryan.html#level4">Beverages</a></li>
+        <li class="active"><a href="MenuItemsPage_Ryan.html#level5">Sides</a></li>
+      </ul>
+    </nav>
+    <br />
+    </div>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search food item..">
+    <script>
+
+      function myFunction(){
+          //if(event.keyCode === 13) {
+
+            //declares variables 
+            var input, filter, ul, h5, i, txtValue, result, tags;
+            input = document.getElementById('myInput');
+            tags = document.getElementsByTagName('h5');
+            var found = false;
+            for(i = 0; i < tags.length; i++){
+                if(tags[i].innerText.toUpperCase().startsWith(input.value.toUpperCase())) {
+                  found = true;
+                } else {
+                  tags[i].parentElement.parentElement.style = 'display:none';
+                }
+            }
+            if(!found) {
+              console.log('No Item with name \"' + input.value + '\" found');
+            }
+
+            var rows = document.getElementsByClassName('row');
+            for(i = 0; i < rows.length; i++) {
+              var none = true;
+              for(var j = 0; j < rows[i].children.length; j++) {
+                if(rows[i].children[j].attributes.length === 1) {
+                  none = false;
+                }
+              }
+              if(none) {
+                console.log('none');
+                rows[i].parentElement.style = 'display:none';
+              }
+            }
+      }
+      </script>
+  </section>
+  <section id="2">
+    <!--This section displays the menu items using bootstrap format.-->
+
+    <!--Each Menu item topic has an specific item for navigation click-->
+    <!-- Grid system container-fluid(bootstrap) use the full width. -->
+
+    <fieldset>
+    <legend><h2 id="level1">Appetizers</h2></legend>
+    <p><br />
+    <div class="row">
+      <div class="col-sm-4 col-md-3">
+      <input type="checkbox" id="churro" value="Appetizer">
+        <label id="lbl" for="churro"> <h5>Churros</h5></label>
+          <details>
+            <summary><img src="imagesRyan/appetizers/churros.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+      <input type="checkbox" id="smkSalmon" value="Appetizer">
+        <label for="smkSalmon"> <h5>Smoked Salmon</h5></label>
+        <details>
+          <summary><img src="imagesRyan/appetizers/smokedSalmon.jpg" height="200" width="200" class="img-circle" /></summary>
+          <p><i>Gluten-Free</i>
+            <li>Price: $7.99</li>
+            <li>Quantity: 4 pieces</li>
+            <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+          </p>
+        </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="hamQuiche" value="Appetizer">
+        <label for="hamQuiche"> <h5>Ham Quiche</h5></label>
+          <details>
+            <summary><img src="imagesRyan/appetizers/hamQuiche.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="spinachQuiche" value="Appetizer">
+        <label for="spinachQuiche"> <h5>Spinach Quiche</h5></label>
+          <details>
+            <summary><img src="imagesRyan/appetizers/spinachQuiche.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="bagels" value="Appetizer">
+        <label for="bagels"> <h5>Bagels</h5></label>
+          <details>
+            <summary><img src="imagesRyan/appetizers/bagels.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="miniPancakes" value="Appetizer">
+        <label for="miniPancakes"> <h5>Mini Pancakes</h5></label>
+          <details>
+            <summary><img src="imagesRyan/appetizers/pancake2.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="mandarins" value="Appetizer">
+        <label for="mandarins"> <h5>Mandarin Oranges</h5></label>
+          <details>
+            <summary><img src="imagesRyan/appetizers/mandarins.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="vegSkew" value="Appetizer">
+        <label for="vegSkew"> <h5>Veggie Skewers</h5></label>
+          <details>
+            <summary><img src="imagesRyan/appetizers/veggieSkewer.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="cheeseQuiche" value="Appetizer">
+        <label for="cheeseQuiche"> <h5>Cheese Quiche</h5></label>
+          <details>
+            <summary><img src="imagesRyan/appetizers/quiche.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+    </div>
+  </p>
+  </fieldset>
+
+  <fieldset>
+    <legend><h2 id="level2">Entrees</h2></legend>
+    <p><br />
+    <div class="row">
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="amBurger" value="Entree">
+        <label for="amBurger"> <h5>The American Burger</h5></label>
+          <details>
+            <summary><img src="imagesRyan/entrees/theAmericanBurger.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="baconBurger" value="Entree">
+        <label for="baconBurger"> <h5>The Bacon-Egg Burger</h5></label>
+          <details>
+            <summary><img src="imagesRyan/entrees/theAmericanBurger.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="aspBurger" value="Entree">
+        <label for="aspBurger"> <h5>The Asparagus Burger</h5></label>
+          <details>
+            <summary><img src="imagesRyan/entrees/asparagusBurger.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="salmon" value="Entree">
+        <label for="salmon"> <h5>Lemon-Zest Salmon</h5></label>
+          <details>
+            <summary><img src="imagesRyan/entrees/lemonZestSalmon.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="pizza" value="Entree">
+        <label for="pizza"> <h5>Signature Pizza Rolls</h5></label>
+          <details>
+            <summary><img src="imagesRyan/entrees/pizzaRolls.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="taco" value="Entree">
+        <label for="taco"> <h5>Fully-Loaded Tacoes</h5></label>
+          <details>
+            <summary><img src="imagesRyan/entrees/taco.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="nacho" value="Entree">
+        <label for="nacho"> <h5>Cheesy-Bacon Nachos</h5></label>
+          <details>
+            <summary><img src="imagesRyan/entrees/nacho.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="soup" value="Entree">
+        <label for="soup"> <h5>Creamy Beacon Soup</h5></label>
+          <details>
+            <summary><img src="imagesRyan/entrees/creamyBeaconSoup.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+    </div>
+  </p>
+  </fieldset>
+
+  <fieldset>
+    <legend><h2 id="level3">Bagels</h2></legend>
+    <p><br />
+    <div class="row">
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="baconEgg" value="Bagels">
+        <label for="baconEgg"> <h5>Bacon Egg and Cheese</h5></label>
+          <details>
+            <summary><img src="imagesRyan/bagels/baconEggCheese.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <input type="checkbox" id="loxBagel" value="Bagels">
+          <label for="loxBagel"> <h5>Bagels and Lox</h5></label>
+            <details>
+              <summary><img src="imagesRyan/bagels/loxBagel.jpg" height="200" width="200" class="img-circle"/></summary>
+              <p><i>Gluten-Free</i>
+                <li>Price: $7.99</li>
+                <li>Quantity: 4 pieces</li>
+                <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+              </p>
+            </details>
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <input type="checkbox" id="sausBagel" value="Bagels">
+            <label for="sausBagel"> <h5>Sausage Egg and Cheese</h5></label>
+              <details>
+                <summary><img src="imagesRyan/bagels/SEggCheese.jpg" height="200" width="200" class="img-circle"/></summary>
+                <p><i>Gluten-Free</i>
+                  <li>Price: $7.99</li>
+                  <li>Quantity: 4 pieces</li>
+                  <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+                </p>
+              </details>
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <input type="checkbox" id="deluxe" value="Bagels">
+          <label for="deluxe"> <h5>Deluxe Breakfast Sandwich</h5></label>
+            <details>
+              <summary><img src="imagesRyan/bagels/deluxeBagel.jpg" height="200" width="200" class="img-circle"/></summary>
+              <p><i>Gluten-Free</i>
+                <li>Price: $7.99</li>
+                <li>Quantity: 4 pieces</li>
+                <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+              </p>
+            </details>
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <input type="checkbox" id="vegBagel" value="Bagels">
+          <label for="vegBagel"> <h5>Veggie Breakfast Bagel</h5></label>
+              <details>
+                <summary><img src="imagesRyan/bagels/veggieBagel.jpg" height="200" width="200" class="img-circle"/></summary>
+                <p><i>Gluten-Free</i>
+                  <li>Price: $7.99</li>
+                  <li>Quantity: 4 pieces</li>
+                  <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+                </p>
+              </details>
+          </div>
+            <div class="col-sm-4 col-md-3">
+              <input type="checkbox" id="hamHerb" value="Bagels">
+              <label for="hamHerb"> <h5>Ham and Herb Bagel</h5></label>
+                <details>
+                  <summary><img src="imagesRyan/bagels/hamHerbBagel.jpg" height="200" width="200" class="img-circle"/></summary>
+                  <p><i>Gluten-Free</i>
+                    <li>Price: $7.99</li>
+                    <li>Quantity: 4 pieces</li>
+                    <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+                  </p>
+                </details>
+            </div>
+              <div class="col-sm-4 col-md-3">
+                <input type="checkbox" id="avoBagel" value="Bagels">
+                <label for="avoBagel"> <h5>Avocado Egg Bagel</h5></label>
+                  <details>
+              <summary><img src="imagesRyan/bagels/avoEggBagel.jpg" height="200" width="200" class="img-circle"/></summary>
+                <p><i>Gluten-Free</i>
+                  <li>Price: $7.99</li>
+                  <li>Quantity: 4 pieces</li>
+                  <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+               </p>
+           </details>
+      </div>
+    </div>
+  </p>
+  </fieldset>
+
+  <fieldset>
+    <h2 id="level4">Beverages</h2>
+    <div class="row">
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="coffee" value="Beverages">
+        <label for="coffee"> <h5>Coffee</h5></label>
+          <details>
+            <summary><img src="imagesRyan/Beverages/coffee.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="applejuice" value="Beverages">
+        <label for="applejuice"> <h5>Apple Juice</h5></label>
+          <details>
+            <summary><img src="imagesRyan/Beverages/applejuice.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="oj" value="Beverages">
+        <label for="oj"> <h5>Orange Juice</h5></label>
+          <details>
+            <summary><img src="imagesRyan/Beverages/orangeJuice.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="coldTea" value="Beverages">
+        <label for="coldTea"> <h5>Cold Iced Tea</h5></label>
+          <details>
+            <summary><img src="imagesRyan/Beverages/ColdTea.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="hotTea" value="Beverages">
+        <label for="hotTea"> <h5>Hot Spiced Tea</h5></label>
+          <details>
+            <summary><img src="imagesRyan/Beverages/HotSpicedTea.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="hotLemon" value="Beverages">
+        <label for="hotLemon"> <h5>Hot Lemon Tea</h5></label>
+          <details>
+            <summary><img src="imagesRyan/Beverages/HotLemonTea.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="soda" value="Beverages">
+        <label for="soda"> <h5>Club Soda</h5></label>
+          <details>
+            <summary><img src="imagesRyan/Beverages/clubsoda.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="hotCoco" value="Beverages">
+        <label for="hotCoco"> <h5>Hot Chocolate</h5></label>
+          <details>
+            <summary><img src="imagesRyan/Beverages/HotChocolate.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="smoothie" value="Beverages">
+        <label for="smoothie"> <h5>Green Kale Smoothie</h5></label>
+          <details>
+            <summary><img src="imagesRyan/Beverages/greenKaleSmoothie.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <h2 id="level5">Sides</h2>
+    <div class="row">
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="fries" value="Sides">
+        <label for="fries"> <h5>Seasoned Fries</h5></label>
+          <details>
+            <summary><img src="imagesRyan/sides/fries.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="mashed" value="Sides">
+        <label for="mashed"> <h5>Mashed Potatoes</h5></label>
+          <details>
+            <summary><img src="imagesRyan/sides/mashedPotatoes.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="onionRings" value="Sides">
+        <label for="onionRings"> <h5>Onion Rings</h5></label>
+          <details>
+            <summary><img src="imagesRyan/sides/onionRings.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="slaw" value="Sides">
+        <label for="slaw"> <h5>Coleslaw</h5></label>
+          <details>
+            <summary><img src="imagesRyan/sides/slaw.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="strawberry" value="Sides">
+        <label for="strawberry"> <h5>Strawberry Cupcakes</h5></label>
+          <details>
+            <summary><img src="imagesRyan/sides/strawberryCupcakes.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="DesPancakes" value="Sides">
+        <label for="DesPancakes"> <h5>Our Morning Doe Dessert Pancakes</h5></label>
+          <details>
+            <summary><img src="imagesRyan/sides/dessertPancake.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <input type="checkbox" id="cocoCake" value="Sides">
+        <label for="cocoCake"> <h5>Chocolate Cake</h5></label>
+          <details>
+            <summary><img src="imagesRyan/sides/cCake.jpg" height="200" width="200" class="img-circle"/></summary>
+            <p><i>Gluten-Free</i>
+              <li>Price: $7.99</li>
+              <li>Quantity: 4 pieces</li>
+              <li>Ingredients: Sugar, Cinnamon, Flour, Egg, Butter, Salt</li>
+            </p>
+          </details>
+      </div>
+    </div>
+  </fieldset>
+  </section>
+</body>
+
+</html>

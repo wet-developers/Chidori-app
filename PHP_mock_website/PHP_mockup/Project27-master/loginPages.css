@@ -1,0 +1,95 @@
+nav.desc {
+    text-indent: 20px;
+    background-color: rgb(161, 214, 161);
+    border-color: black;
+    border-width: 4px;
+    border-style: solid;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+  }
+
+body{
+text-align: center;
+}
+
+div.theme{
+background-color: rgb(230, 201, 151);
+border-color: black;
+border-width: 2px;
+border-style: solid;
+}
+
+p.intro{
+text-align: center;
+font-size: 20px;
+font-style: oblique;
+}
+
+footer.foot{
+background-color: rgb(230, 201, 151);
+border-color: black;
+border-width: 2px;
+border-style: solid;
+}
+
+.submitButton {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.space {
+  padding: 10px;
+}
+
+.createAccountButton {
+  padding: 5px;
+}
+
+table.loginTable {
+   margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 110%;
+    width: auto;
+    overflow: auto;
+    text-align: left;
+    border-color: black;
+    border-width: 4px;
+    border-style: solid;
+}
+
+table.loginTable th {
+  text-align: center;
+  height: 30px;
+  background-color: rgb(116, 164, 236);
+  color: black;
+}
+
+.tableHead {
+      background-color: rgb(202, 202, 202);
+      color: white;
+      font-weight: normal;
+      padding: 10px 30px;
+      text-align: center;
+    }
+
+table.loginTable td {
+      background-color: rgb(209, 209, 209);
+      color: black;
+      padding: 20px 30px;
+    }
+
+.largeTextArea {
+  width: 400px; 
+  height: 100px; 
+  border: 1px solid #999999; 
+  padding: 5px;
+}
+
+.createReviewButtons {
+  margin-left:auto; 
+  margin-right:auto;
+}
+

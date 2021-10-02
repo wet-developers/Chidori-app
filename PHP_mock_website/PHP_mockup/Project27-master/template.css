@@ -1,0 +1,30 @@
+nav.desc {text-indent: 20px;
+      background-color: rgb(161, 214, 161);
+      border-color: black;
+      border-width: 4px;
+      border-style: solid;
+      padding: 10px;
+      margin: 20px;
+      text-align: center;
+    }
+body{
+  text-align: center;
+}
+div.theme{
+  background-color: rgb(230, 201, 151);
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+p.intro{
+  text-align: center;
+  font-size: 20px;
+  font-style: oblique;
+}
+footer.foot{
+  background-color: rgb(230, 201, 151);
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+
