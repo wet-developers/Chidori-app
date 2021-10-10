@@ -1,0 +1,38 @@
+<mat-dialog-actions>
+    <a (click)="close()">
+        <mat-icon>clear</mat-icon>
+    </a>
+</mat-dialog-actions>
+<div *ngIf="searchResults" style="margin-left: 170px">
+    <h1>Your search for "{{ searchResults }}" revealed the following:</h1>
+</div>
+<div class="row">
+    <section class="col-7 left">
+        <mat-dialog-content>
+            <form [formGroup]="form"> 
+                <input class="search-bar" matInput
+                        placeholder="Search our store"
+                       formControlName="description">
+            </form>
+        </mat-dialog-content>
+    </section>
+    <section class="col-5 right">
+        <button class="mat-raised-button mat-primary"(click)="search()">
+            <mat-icon>search</mat-icon>
+        </button>
+    </section>
+</div>
+<div style="margin-bottom: 40px">
+    <ng-container *ngFor="let product of products">
+        <div *ngIf="searchIndication === true && product.description === searchResults" style="margin-left: 120px; margin-bottom: 30px; margin-top: 60px">
+            <a href="collections">
+                <div>
+                    <img src="{{ product.image }}" height="220" width="280">
+                </div>
+                <div style="height: 30px; font-size: medium">
+                    <h2 [innerHTML]="product.caption"></h2>
+                </div>  
+            </a>
+        </div>
+    </ng-container>
+</div>

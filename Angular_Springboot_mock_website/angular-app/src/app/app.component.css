@@ -1,0 +1,29 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #d21919;
+    color: white;
+    font-weight: 400;
+  }
+
+  .horizontal-spacer {
+    flex: 0.5;
+  }
+  .vertical-spacer {
+    margin-top: 68px;
+    margin-right: 65px;
+    display: flex;
+    position: absolute;
+
+  }
+
+  .collections-headline {
+    padding-right: 40px;
+    height: 40px;
+    color: white;
+  }

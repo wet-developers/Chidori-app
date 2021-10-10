@@ -1,0 +1,31 @@
+<div class="container">
+  <div style="margin-top: 100px; flex: 1; background-color: black; position: absolute">
+    <div class="row" style="margin-left: 430px; margin-top: 10px">
+      <h2 style="color: white">Featured Collection</h2>
+    </div>
+    <div class="row" style="margin-left: 60px; margin-right: 60px; margin-top: 20px">
+      <ng-container *ngFor="let featuredCollection of featuredCollectionsRow1">
+        <a (click)="searchForProductRow1($event)">
+          <div style="margin-right: 25px">
+              <img src="{{ featuredCollection.image }}" height="220" width="280">
+          </div>
+          <div style="height: 30px; font-size: medium">
+              <h2 [innerHTML]="featuredCollection.caption"></h2>
+          </div>  
+        </a>
+      </ng-container>
+    </div>
+    <div class="row" style="margin-left: 60px; margin-right: 60px; margin-top: 10px; margin-bottom: 10px">
+      <ng-container *ngFor="let featuredCollection of featuredCollectionsRow2">
+        <a (click)="searchForProductRow2($event)">
+          <div style="margin-right: 25px">
+           <img src="{{ featuredCollection.image }}" height="220" width="280">
+          </div>
+          <div style="height: 30px; font-size: medium">
+           <h2 [innerHTML]="featuredCollection.caption"></h2>
+          </div>  
+        </a>
+      </ng-container>
+    </div>
+  </div> 
+</div>

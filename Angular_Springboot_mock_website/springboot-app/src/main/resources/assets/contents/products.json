@@ -1,0 +1,88 @@
+{
+    "products": [
+        {
+            "image": "assets/AEOGII Shirt.png",
+            "caption": "AEOGII Shirt - $50",
+            "description": "AEOGII Shirt"
+        },
+        {
+            "image": "assets/Akatsuki Ski Mask.png",
+            "caption": "Akatsuki Ski Mask - $30",
+            "description": "Akatsuki Ski Mask"
+        },
+        {
+            "image": "assets/Death B4 Dishonor Hoodie.png",
+            "caption": "Death B4 Dishonor Hoodie - $90",
+            "description": "Death B4 Dishonor Hoodie"
+        },
+        {
+            "image": "assets/My Brothers Keeper Shirt.png",
+            "caption": "My Brothers Keeper Shirt - $50",
+            "description": "My Brothers Keeper Shirt"
+        },
+        {
+            "image": "assets/TNL Small Maylor Bags.png",
+            "caption": "TNL Small Maylor Bags  - $0.50",
+            "description": "TNL Small Maylor Bags"
+        },
+        {
+            "image": "assets/TNL Honeycomb Sweat Shorts.png",
+            "caption": "TNL Honeycomb Sweat Shorts - $50",
+            "description": "TNL Honeycomb Sweat Shorts"
+        },
+        {
+            "image": "assets/TNL Big Maylor Bags.png",
+            "caption": "TNL Big Maylor Bags  - $1",
+            "description": "TNL Big Maylor Bags"
+        },
+        {
+            "image": "assets/TNL Hoodie.png",
+            "caption": "TNL Hoodie - $60",
+            "description": "TNL Hoodie"
+        },
+        {
+            "image": "assets/TNL X Shirt.png",
+            "caption": "TNL X SHIRT  - $50",
+            "description": "TNL X Shirt"
+        },
+        {
+            "image": "assets/Void TNL Shirt.png",
+            "caption": "Void TNL X SHIRT  - $50",
+            "description": "Void TNL X Shirt"
+        }
+    ],
+    "featuredCollectionsRow1": [
+        {
+            "image": "assets/AEOGII Shirt.png",
+            "caption": "AEOGII Shirt - $50",
+            "description": "AEOGII Shirt"
+        },
+        {
+            "image": "assets/Void TNL Shirt.png",
+            "caption": "Void TNL X SHIRT  - $50",
+            "description": "Void TNL X Shirt"
+        },
+        {
+            "image": "assets/My Brothers Keeper Shirt.png",
+            "caption": "My Brothers Keeper Shirt - $50",
+            "description": "My Brothers Keeper Shirt"
+        }
+    ],
+    "featuredCollectionsRow2": [
+        {
+            "image": "assets/TNL Small Maylor Bags.png",
+            "caption": "TNL Small Maylor Bags  - $0.50",
+            "description": "TNL Small Maylor Bags"
+        },
+        {
+            "image": "assets/TNL Big Maylor Bags.png",
+            "caption": "TNL Big Maylor Bags  - $1",
+            "description": "TNL Big Maylor Bags"
+        },
+        {
+            "image": "assets/Death B4 Dishonor Hoodie.png",
+            "caption": "Death B4 Dishonor Hoodie - $90",
+            "description": "Death B4 Dishonor Hoodie"
+        }
+    ]
+}

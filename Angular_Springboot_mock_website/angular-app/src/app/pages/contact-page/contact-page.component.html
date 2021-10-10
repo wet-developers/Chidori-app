@@ -1,0 +1,40 @@
+<div class="container" style="margin-top: 120px; margin-right: 50px">
+    <div class="row" style="margin-bottom: 40px">
+        <h1 style="margin-left: 140px; color: white;">Contact Us</h1>
+    </div>
+    <div class="row" style="margin-right: 100px">
+        <img src="assets/contact-us.png">
+    </div>
+    <div class="row">
+        <h3 style="margin-left: 185px; margin-top: 50px; color: white;"> TAP IN.</h3>
+    </div>
+    <form [formGroup]="form">
+        <div class="row">
+            <section class="col-2 left">
+                <input class="name-control" 
+                placeholder="Name" formControlName="name">
+            </section>
+            <section class="col-2 right">
+                <input class="email-control" 
+                placeholder="Email" formControlName="email">
+            </section>
+        </div>
+        <div class="row">
+           <section class="col-2">
+                <input class="number-control" 
+                placeholder="Phone Number" formControlName="number" width="40">
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-12">
+                <input class="message-control" 
+                placeholder="Message" formControlName="message">
+            </section>
+        </div>
+    </form>
+    <div class="row">
+        <button mat-raised-button style="margin-left: 15px" class="send-button" (click)="contactFormRequest()">
+            Send
+        </button>
+    </div>
+</div>>

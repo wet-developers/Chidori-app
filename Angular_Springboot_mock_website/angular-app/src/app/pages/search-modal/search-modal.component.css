@@ -1,0 +1,16 @@
+.mat-raised-button {
+    margin-right: 140px;
+    margin-top: 50px;
+}
+a {
+    margin-bottom: 60px;
+    margin-left: 820px;
+}
+a:hover {
+    background-color: black;
+    cursor: pointer;
+  }
+.search-bar {
+    margin-left: 310px;
+    margin-top: 50px;
+}

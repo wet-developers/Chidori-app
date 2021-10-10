@@ -1,0 +1,21 @@
+.name-control {
+    margin-right:10px;
+    margin-bottom: 10px;
+}
+.email-control {
+    margin-left:10px;
+    margin-bottom: 10px;
+}
+.number-control {
+    margin-right:10px;
+    margin-bottom: 10px;
+    
+}
+.message-control {
+    margin-right:10px;
+    margin-bottom: 10px;
+    
+}
+.send-button:hover {
+    background-color: gray;
+}

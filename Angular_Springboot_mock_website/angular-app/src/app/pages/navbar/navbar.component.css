@@ -1,0 +1,41 @@
+.navbar {
+    position: absolute;
+    padding-top: 0;
+    left: -20px;
+    right: -20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    margin-top: 38px;
+  }
+  .teamNoLackin-tag {
+    flex: 0.7;
+    flex-direction: row;
+  }
+
+  .home-tag {
+    flex: 0.7;
+    flex-direction: row;
+    margin-left: 70px;
+  }
+  .collections-tag {
+    flex: 0.7;
+    flex-direction: row;
+    margin-right: 100px;  
+  }
+  .contact-tag {
+    flex: 0.7;
+    flex-direction: row;
+    margin-right: 100px;
+  }
+  .search-tag {
+    flex: 0.7;
+    flex-direction: row;
+    margin-right: 100px;
+  }
+  .cart-tag {
+    flex: 0.7;
+    flex-direction: row;
+    margin-right: 100px;
+  }

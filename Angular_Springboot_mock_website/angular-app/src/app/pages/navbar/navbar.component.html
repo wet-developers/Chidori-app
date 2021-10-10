@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">  
+      <nav mat-tab-nav-bar class="navbar" [backgroundColor]="background"> 
+        <section class="col-2 left">
+          <a mat-tab-link class="teamNoLackin-tag" href="home">
+            <img [src]="img" height="40px" width="150px">
+          </a>
+        </section>
+        <section class="col-10 right">
+          <a mat-tab-link class="home-tag" href="home">Home</a>
+          <a mat-tab-link class="collections-tag" href="collections">Team Store</a>
+          <a mat-tab-link class="contact-tag" href="contact-page">Contact</a>
+          <a mat-tab-link (click)="openSearchModal()" class="search-tag" mdbWavesEffect> 
+            <mat-icon aria-hidden="false">search</mat-icon>
+          </a>
+          <a mat-tab-link class="cart-tag" href="cart">
+            <mat-icon aria-hidden="false">add_shopping_cart</mat-icon>    
+          </a>
+        </section>
+      </nav>
+    </div> 
+</div>
