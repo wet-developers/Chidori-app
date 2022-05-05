@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.blogproject.dto.RegisterRequest;
+import com.blogproject.model.LoginRequest;
 import com.blogproject.service.AuthService;
 
 
@@ -23,14 +24,15 @@ public class BlogController {
 	private AuthService authService;
 	
 	@PostMapping("/signup")
-	public ResponseEntity<RegisterRequest> signup(@RequestBody RegisterRequest request) {
-		authService.signUp(request);
+	public ResponseEntity<RegisterRequest> signup(@RequestBody RegisterRequest register) {
+		authService.signUp(register);
 		return new ResponseEntity<RegisterRequest>(HttpStatus.OK);
 	}
 	
-	@GetMapping("/hello")
-	public String test(@RequestBody RegisterRequest request) {
-		return "hello";
+	@PostMapping("/login")
+	public ResponseEntity<RegisterRequest> signup(@RequestBody LoginRequest login) {
+		authService.login(login);
+		return new ResponseEntity<RegisterRequest>(HttpStatus.OK);
 	}
 
 }
