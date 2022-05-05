@@ -1,4 +1,4 @@
-package com.blogproject.Sayeh.SayehBlog.model;
+package com.blogproject.model;
 
 import java.time.Instant;
 

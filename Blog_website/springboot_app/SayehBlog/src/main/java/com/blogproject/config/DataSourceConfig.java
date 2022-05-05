@@ -1,4 +1,4 @@
-package com.blogproject.Sayeh.SayehBlog.config;
+package com.blogproject.config;
 
 import javax.sql.DataSource;
 
