@@ -1,4 +1,4 @@
-package com.blogproject.model;
+package com.blogproject.dto;
 
 public class LoginRequest {
 	
